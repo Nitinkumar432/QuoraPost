@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home_EJS</title>
+    <link rel="stylesheet" href="/home.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#questions">Questions</a></li>
+                <li><a href="#users">Users</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#settings">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="welcome">
+            <h1 class="main">Welcome to our Website</h1>
+        </section>
+        <section class="dashboard">
+            <div class="sidebar">
+                <h2>Categories</h2>
+                <ul>
+                    <li><a href="#technology">Technology</a></li>
+                    <li><a href="#science">Science</a></li>
+                    <li><a href="#health">Health</a></li>
+                    <li><a href="#business">Business</a></li>
+                    <li><a href="#entertainment">Entertainment</a></li>
+                </ul>
+                <button class="btn primary-btn" onclick="addNewPost()">Add New Post</button>
+               <button class="btn secondary-btn" onclick="seeAllPosts()">See All Posts</button>
+            </div>
+            <div class="content">
+                <h2>Recent Questions</h2>
+                <div class="question-list">
+                    <div class="question-item">
+                        <h3>What is the future of AI?</h3>
+                        <p>Asked by <strong>User1</strong></p>
+                    </div>
+                    <div class="question-item">
+                        <h3>How to stay healthy during a pandemic?</h3>
+                        <p>Asked by <strong>User2</strong></p>
+                    </div>
+                    <div class="question-item">
+                        <h3>What are the best programming languages to learn in 2024?</h3>
+                        <p>Asked by <strong>User3</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </footer>
+    <script>
+       
+
+function addNewPost() {
+    window.location.href = "http://localhost:8080/posts/new";
+}
+
+function seeAllPosts() {
+    window.location.href = "http://localhost:8080/posts";
+}
+
+
+    </script>
+</body>
+</html>

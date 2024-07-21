@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Posts</title>
+    <link rel="stylesheet" href="/edit.css">
+</head>
+<body>
+    <header>
+        <h2>Edit Your Post</h2>
+    </header>
+    <main>
+        <div class="edit-post-container">
+            <p class="post-id">Post ID: <%= post.id %></p>
+            <p class="post-username">Username: @<%= post.username %></p>
+            <form method="post" action="/posts/<%= post.id %>?_method=PATCH" onsubmit="return showSuccessAlert()">
+                <textarea name="content" required><%= post.content %></textarea><br>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </main>
+    <script>
+        function showSuccessAlert() {
+            alert('You have successfully edited the post!');
+            return true;
+        }
+    </script>
+</body>
+</html>
